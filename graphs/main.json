@@ -1,0 +1,68 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "all"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "strings/Replace_7103b": {
+            "component": "strings/Replace",
+            "metadata": {
+                "label": "Replace",
+                "x": 252,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_490z4": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "Output",
+                "x": 360,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "strings/Replace_7103b",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_490z4",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "world",
+            "tgt": {
+                "process": "strings/Replace_7103b",
+                "port": "pattern"
+            }
+        },
+        {
+            "data": "bird",
+            "tgt": {
+                "process": "strings/Replace_7103b",
+                "port": "replacement"
+            }
+        },
+        {
+            "data": "Hello world!",
+            "tgt": {
+                "process": "strings/Replace_7103b",
+                "port": "in"
+            }
+        }
+    ]
+}
